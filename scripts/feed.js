@@ -1,16 +1,15 @@
 $(document).ready(function() {
 
-	// HTTP REQUEST
-	var myUrl = "https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json"
+    // HTTP REQUEST
+    var myUrl = "https://codesmith-precourse.firebaseio.com/instagram/-JqL35o8u6t3dTQaFXSV.json"
 
-	$.get(myUrl, function(data) {
-		return data;
-	}).done(function(n) {
-		var picArr = n;
-		for (var i = 0; i < picArr.length; i++) {
-			$('#post-container').prepend(function() {
-				return `	<div class="" id="post">
-				<div class="post-header">
+    $.get(myUrl, function(data) {
+        return data;
+    }).done(function(n) {
+        var picArr = n;
+        for (var i = 0; i < picArr.length; i++) {
+            var comment1 = `	<div class="" id="post">
+			<div class="post-header">
 					<div class="avitar">
 						<img class="img-responsive img-round" src="assets/images/propic.png" id="avatar-img">
 					</div>
@@ -20,7 +19,7 @@ $(document).ready(function() {
 					</a>
 				</div>
 				<div class="post-main">
-					<img class="img-responsive" src='${picArr[i]}' id="main-img" style='width:100%;'>
+					<img class="img-responsive main-img" src='${picArr[i]}' style='width:100%;'>
 				</div>
 				<div class="post-text">
 					<div id="likes-count">1,200 Likes</div>
@@ -33,48 +32,43 @@ $(document).ready(function() {
 					</div>
 					<hr>
 					<div id="post-footer">
-						<i class="fa fa-heart-o" aria-hidden="true" id="heart-o"></i>
-						<i class="fa fa-heart" aria-hidden="true" style="color: red; display: none;" id="heart"></i>
-						<input type="text" placeholder="Add a comment..." id="commentInput"></input>
+						<i class="fa fa-heart-o heart-o" aria-hidden="true"></i>
+						<i class="fa fa-heart heart" aria-hidden="true" style="color: red; display: none;"></i>
+						<input type="text" placeholder="please add stuff" class="commentInput"></input>
 						<img class="img-responsive" src="assets/images/dot.png" id="dot">
 					</div>
 				</div>
-			</div>`
-			})
-		}
-	})
+			</div>`;
+            $('#post-container').prepend(comment1);
+        } // ends loop
 
 
+		$('.commentInput').keypress(function(e) {
 
-	var commentSubmit = $('#commentInput')
-    commentSubmit.keypress(function(e) {
-        console.log(e)
-        if (e.which == 13) {
-            var newComment = $(e.target).val();
-            $(e.target).val("");
-            $(e.target).parent().parent().find('#comments').prepend(function() {
-                return "<div><a href=#><strong>smeads</strong></a>" + " " + newComment + "</div>"
-            });
-        }
-    });
+			if (e.which == 13) {
+	            var newComment = $(e.target).val();
+	            $(e.target).val("");
+	            $(e.target).parent().parent().find('#comments').prepend(function() {
+	                return "<div><a href=#><strong>smeads</strong></a>" + " " + newComment + "</div>"
+	            });
+	        }
 
-    $('#heart-o').on('click', function() {
-        $(this).hide();
-        $('#heart').show();
-    })
-    $('#heart').on('click', function() {
-        $(this).hide();
-        $('#heart-o').show();
-    })
+		});
 
-    $('#main-img').on('dblclick', function(e) {
-        console.log(e);
-        e.active_target.parent().child('.heart').toggle();
+		$('.heart-o').on('click', function(e) {
+			$(e.target).hide();
+			$(e.target).parent().find('.heart').show();
+		})
+		$('.heart').on('click', function(e) {
+			$(e.target).hide();
+			$(e.target).parent().find('.heart-o').show();
+		})
+		$('.main-img').on('dblclick', function(e) {
+			$(e.target).parent().parent().find('.heart').toggle()
+			$(e.target).parent().parent().find('.heart-o').toggle()
+		});
 
-        $('#heart-o').toggle();
-        $('#heart').toggle();
-    });
+	});
 
 
-	
 });

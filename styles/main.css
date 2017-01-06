@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  text-align: center;
+  min-height: 100%;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 0;
+  min-height: 100%;
+}
+
+.content {
+  color: #262626;
+  margin-top: 12px;
+  max-width: 350px;
+  display: inline-block;
+}
+
+.login {
+  background-color: white;
+  border: 1px solid #efefef;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+
+#logo {
+  margin: 10px 0px 5px 0px;
+  width: 182px;
+  height: 67px;
+  display: inline-block;
+}
+
+.signup {
+  background-color: white;
+  border: 1px solid #efefef;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+
+.signup p {
+  margin: 15px;
+}
+
+#signup {
+  color: #3897f0;
+  text-decoration: none;
+}
+
+#app {
+  margin: 30px 0 10px;
+}
+
+.form-group {
+  width: 275px;
+}
+
+form {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin: 0px 40px 15px 40px;
+}
+
+.form-group input {
+  background: 0 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #262626;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  width: 100%;
+}
+
+#pwd {
+  position: relative;
+}
+
+#pwd a {
+  position: absolute;
+  color: #262626;
+  text-decoration: none;
+  top: 9px;
+  right: 13px
+}
+
+button {
+  width: 78%;
+}
+
+.btn-primary {
+  background-color: #3897f0;
+  border-color: #3897f0;
+  font-weight: 600;
+}
+
+.img-responsive {
+  display: inline-block;
+}
+
+.col-xs-6 {
+  padding: 0px;
+}
+
+#apple {
+  margin: 0px 0px 0px 60px;
+  width: 136px;
+  height: 41px;
+}
+
+#google {
+  margin: 0px 30px 0px 0px;
+  width: 127px;
+  height: 41px;
+}

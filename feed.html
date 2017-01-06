@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Instagram Feed</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/feed.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<!-- NAV -->
+	<div class="container-fluid" id="head-container">
+		<nav class="navbar" id="head-nav">
+			<a class="navbar-brand" href="#"><img class="img-responsive" alt="Instagram Logo" src="assets/images/nav-logo.png" id="nav-logo"></a>
+
+			<form class="form-inline" role="search">
+				<input type="text" placeholder="search" class="form-control" id="search">
+			</form>
+
+			<ul class="nav nav-bar pull-right">
+				<li class="nav-item">
+					<a class="nav-link">
+						<img class="img-responsive" src="assets/images/discover.png">
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link">
+						<img class="img-responsive" src="assets/images/heart.png">
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link">
+						<img class="img-responsive" src="assets/images/profile.png">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- POSTS -->
+	<div class="container" id="post-container">
+		<div class="" id="post">
+			<div class="post-header">
+				<div class="avitar">
+					<img class="img-responsive img-round" src="assets/images/propic.png" id="avatar-img">
+				</div>
+				<a class="username" href=#>wasatchandy</a>
+				<a href=#>
+					<p class="post-time">10h</p>
+				</a>
+			</div>
+			<div class="post-main">
+				<img class="img-responsive" src="assets/images/van.png" id="main-img">
+			</div>
+			<div class="post-text">
+				<div id="likes-count">1,200 Likes</div>
+				<div>
+					<p id="user-comment"><strong>wasatchandy</strong> find your line!</p>
+				</div>
+				<p id="view-comments">view all 31 comments</p>
+				<div id="comments" style="text-align: left;">
+					<div><a href=#><strong>smeads</strong></a> LIKEY!</div>
+				</div>
+				<hr>
+				<div id="post-footer">
+					<i class="fa fa-heart-o" aria-hidden="true" id="heart-o"></i>
+					<i class="fa fa-heart" aria-hidden="true" style="color: red; display: none;" id="heart"></i>
+					<input type="text" placeholder="Add a comment..." id="commentInput"></input>
+					<img class="img-responsive" src="assets/images/dot.png" id="dot">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id=load-more>
+		<p>Load More</p>
+	</div>
+	<!-- FOOTER -->
+	<footer class=container-fluid id=footer>
+		<nav class="navbar" id="footer-nav">
+			<ul class="nav nav-bar" id="footer-nav-bar">
+				<li><a href=#>ABOUT US</a></li>
+				<li><a href=#>SUPPORT</a></li>
+				<li><a href=#>BLOG</a></li>
+				<li><a href=#>PRESS</a></li>
+				<li><a href=#>API</a></li>
+				<li><a href=#>JOBS</a></li>
+				<li><a href=#>PRIVACY</a></li>
+				<li><a href=#>TERMS</a></li>
+				<li><a href=#>DIRECTORY</a></li>
+				<li><a href=#>LANGUAGE</a></li>
+			</ul>
+			<span id="copyright">© 2017 INSTAGRAM</span>
+		</nav>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type='text/javascript' src='scripts/feed.js'></script>
+</body>
+
+</html>
